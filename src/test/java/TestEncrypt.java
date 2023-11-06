@@ -14,7 +14,23 @@ public class TestEncrypt {
 
         assertEquals(true, testCeasar instanceof Caesar);
     }
+    @Test
+    public void newEncrypt_instantiatesCorrectly() {
+        EncryptClass testEncrypt = new EncryptClass();
+        assertEquals(true, testEncrypt instanceof EncryptClass);
+    }
 
+    @Test
+    public void newDecrypt_instantiatesCorrectly() {
+        Decrypt testDecrypt = new Decrypt();
+        assertEquals(true, testDecrypt instanceof Decrypt);
+    }
+
+    @Test
+    public void newApp_instantiatesCorrectly() {
+        App newApp = new App();
+        assertEquals(true, newApp instanceof App);
+    }
 
 
 }
