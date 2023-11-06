@@ -45,6 +45,39 @@ public class TestEncrypt {
 
     }
 
+    @Test
+    public void newEncrypt_encryptsOriginalMessage(){
+        EncryptClass testEncrypt = new EncryptClass();
+        String output = testEncrypt.EncryptMessage("we attack at dawn",4);
+        String expectedOutput = "AI EXXEGO EX HEAR";
+        assertEquals(expectedOutput,output);
+
+    }
+    @Test
+    public void newEncrypt_getMessage(){
+        EncryptClass testEncrypt = new EncryptClass();
+        testEncrypt.EncryptMessage("we attack at dawn",4);
+        String expectedOutput = "AI EXXEGO EX HEAR";
+        assertEquals(expectedOutput,testEncrypt.getEncryptedMessage());
+
+    }
+    @Test
+    public void newDecrypt_decryptsEncryptedMessage(){
+        Decrypt testDecrypt = new Decrypt();
+        String output = testDecrypt.decryptMessage("AI EXXEGO EX HEAR",4);
+        String expectedOutput = "WE ATTACK AT DAWN";
+        assertEquals(expectedOutput,output);
+
+    }
+    @Test
+    public void newDecrypt_getMessage(){
+        Decrypt testDecrypt = new Decrypt();
+        testDecrypt.decryptMessage("AI EXXEGO EX HEAR",4);
+        String expectedOutput = "WE ATTACK AT DAWN";
+        assertEquals(expectedOutput,testDecrypt.getDecryptedMessage());
+
+    }
+
 
 
 }
